@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Kaushan+Script&family=Mouse+Memoirs&display=swap');
+
 html {
     scroll-behavior: smooth;
-  }
+}
 
 :root {
     --background-color: #f2f3fb;
@@ -133,7 +134,7 @@ main {
     flex-direction: column;
 }
 
-.about {
+.container {
     position: relative;
     padding: 0 20px;
     min-height: 800px;
@@ -143,14 +144,15 @@ main {
     align-items: center;
 }
 
-.about > h1{
+.container>h1 {
     font-family: 'Kaushan Script', cursive;
     font-size: 30px;
     position: absolute;
     top: 20px;
     left: 20px;
 }
-.about h2 {
+
+.container .tecnologias-text {
     margin-top: 120px;
     font-size: 30px;
     font-family: 'Kaushan Script', cursive;
@@ -189,10 +191,12 @@ main {
     animation-direction: normal;
     animation-fill-mode: forwards;
 }
-.text{
+
+.text {
     max-width: 400px;
     margin-right: 10px;
 }
+
 .text span {
     margin-bottom: 15px;
 }
@@ -221,21 +225,39 @@ main {
     font-family: 'Bebas Neue', cursive;
     text-align: justify;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
-.tecnologias{
+
+.tecnologias {
     max-width: 100%;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    scroll-behavior:auto;
-   -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
 }
-.tecnologias > i{
+
+i {
     margin: 15px 20px;
-   font-size: 40px;
+    font-size: 40px;
 }
+footer {
+    background-color: inherit;
+}
+footer div {
+    border-radius: 50%;
+    background-color: inherit;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    z-index: 1;
+}
+footer ion-icon {
+    width: 1.3em;
+    height: 1.3em;
+} 
 
 
 @media (max-width: 600px) {
@@ -273,7 +295,12 @@ main {
         -ms-transform: translateX(10px);
         transform: translateX(10px);
     }
-    .about h2 {
+    .container{
+        min-height: auto;
+        margin-bottom: 40px;
+    }
+
+    .container .tecnologias-text {
         margin-top: 50px;
     }
 
@@ -301,5 +328,5 @@ main {
         width: 100%;
         height: 100%;
     }
-    
+
 }

@@ -15,10 +15,9 @@
         <header>I'm, Marcus Vinícius</header>
         <div class="top-right">
             <nav>
-                <h3>HOME |</h3>
-                <h3> SOBRE |</h3>
-                <h3> CONTATO |</h3>
-                <h3> INFORMACÕES</h3>
+                <h3 id="projetos">PROJETOS |</h3>
+                <h3 id="sobre"> SOBRE |</h3>
+                <h3 id="contato"> CONTATO |</h3>
             </nav>
             <label class="switch" id="switch">
                 <input type="checkbox">
@@ -27,7 +26,7 @@
         </div>
     </div>
     <main>
-        <section class="about">
+        <section class="container sobre">
             <h1>SOBRE MIM</h1>
             <div class="content">
                 <div class="text">
@@ -42,18 +41,46 @@
                     <img src="./imgs/WhatsApp Image 2022-07-07 at 13.42.57.jpeg" alt="">
                 </div>
             </div>
-            <h2>Tecnologias que eu utilizo: </h1>
-            <div class="tecnologias">
-                <i class="fa-brands fa-html5"></i>
-                <i class="fa-brands fa-css3-alt"></i>
-                <i class="fa-brands fa-js"></i>
-                <i class="fa-brands fa-node"></i>
-                <i class="fa-brands fa-react"></i>
-                <i class="fa-solid fa-database"></i>
-                <i class="fa-brands fa-npm"></i>
-                <i class="fa-brands fa-github"></i>
-            </div>
+            <h2 class="tecnologias-text">Tecnologias que eu utilizo: </h1>
+                <div class="tecnologias">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-node"></i>
+                    <i class="fa-brands fa-react"></i>
+                    <i class="fa-solid fa-database"></i>
+                    <i class="fa-brands fa-npm"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
 
+        </section>
+
+        <section class="container projetos">
+            <h1>PROJETOS</h1>
+            <div class="content">
+                <div class="text">
+                    <h1>Em breve</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem consectetur quibusdam quas. Qui
+                        quis quisquam aspernatur. Alias odio minima deleniti quas pariatur, nesciunt nulla praesentium
+                        dolor blanditiis repellendus, voluptate laboriosam.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container contato">
+            <h1>CONTATO</h1>
+            <div class="content">
+                <div class="text">
+                    <h1>Em breve</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem consectetur quibusdam quas. Qui
+                        quis quisquam aspernatur. Alias odio minima deleniti quas pariatur, nesciunt nulla praesentium
+                        dolor blanditiis repellendus, voluptate laboriosam.
+                    </p>
+                </div>
+            </div>
         </section>
         <article>
             <h3>
@@ -66,6 +93,13 @@
             </p>
         </article>
     </main>
+    <footer>
+        <div>
+            <ion-icon id="up" name="chevron-up-circle-outline"></ion-icon>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/01ddfdab69.js" crossorigin="anonymous"></script>
     <script>
         const body = document.querySelector("body");
@@ -84,10 +118,24 @@
                 e.classList.toggle("dark")
             })
         }
-        setTimeout(() => {
-            document.querySelector(".tecnologias").scrollIntoView()
-            setTimeout(() => document.querySelector(".fa-github").scrollIntoView(),2000)
-        },3000)
+        const sobre = document.getElementById("sobre");
+        const projetos = document.getElementById("projetos");
+        const contato = document.getElementById("contato");
+        const info = document.getElementById("info");
+        const up = document.getElementById("up")
+
+        sobre.addEventListener("click", () => {
+            document.querySelector(".sobre").scrollIntoView();
+        })
+        projetos.addEventListener("click", () => {
+            document.querySelector(".projetos").scrollIntoView();
+        })
+        contato.addEventListener("click", () => {
+            document.querySelector(".contato").scrollIntoView();
+        })
+        up.addEventListener("click", () => {
+            document.querySelector(".top").scrollIntoView();
+        })
     </script>
 </body>
 
