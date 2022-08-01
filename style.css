@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=Kaushan+Script&family=Mouse+Memoirs&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
+
+:root {
+    --background-color: #f2f3fb;
+    --text-color: #0D1207;
+    --text-color-dark: #ffffff;
+    --dark-bg: #071120;
+    --menu-font: 'Bebas Neue', cursive;
+    --apresentacao-cor-fonte: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 22%, rgba(0, 212, 255, 1) 100%);
+}
+
+:root.dark {
+    --text-color: #ffffff;
+    --dark-bg: #0D1207;
+}
+
+body.dark {
+    background-color: var(--dark-bg);
+    color: var(--text-color-dark);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.top {
+    align-items: center;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px 20px 10px 20px;
+    margin: 10px auto;
+    justify-content: space-between;
+    border-bottom: 2px solid #ff9d14b7;
+    border-top: 2px solid #ff9d14b7;
+    font-size: 30px;
+    font-family: var(--menu-font);
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+header {
+    display: inline;
+}
+
+nav {
+    margin-right: 30px;
+    display: inline;
+}
+
+nav>h3:hover {
+    color: #FF9F14;
+}
+
+nav>h3 {
+    display: inline;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: rgb(219, 214, 214);
+}
+
+input:checked+.slider:before {
+    background-color: #333;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider:before {
+    border-radius: 50%;
+}
+
+main {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.about {
+    position: relative;
+    padding: 0 20px;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about > h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.about h2 {
+    margin-top: 120px;
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.imagem img {
+    max-width: 20em;
+    max-height: 20rem;
+    border-radius: 40%;
+    border: 2px solid var(--background-color);
+    animation-name: translater;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.content {
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content h1 {
+    font-size: 90px;
+    background: var(--apresentacao-cor-fonte);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Mouse Memoirs', sans-serif;
+    animation-name: translater;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.text{
+    max-width: 400px;
+    margin-right: 10px;
+}
+.text span {
+    margin-bottom: 15px;
+}
+
+@keyframes translater {
+    from {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.content .imagem {
+    border-radius: 30px;
+}
+
+.content p {
+    font-size: 20px;
+    letter-spacing: .1em;
+    line-height: 25px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: justify;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.tecnologias{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior:auto;
+   -webkit-scroll-behavior: smooth;
+}
+.tecnologias > i{
+    margin: 15px 20px;
+   font-size: 40px;
+}
+
+
+@media (max-width: 600px) {
+    .top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        font-size: 18px;
+    }
+
+    .top-right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .slider:before {
+        width: 8px;
+        height: 8px;
+    }
+
+    .switch {
+        width: 25px;
+        height: 15px;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    .about h2 {
+        margin-top: 50px;
+    }
+
+    .content {
+        margin-top: 40px;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .content h1 {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    .content h3 {
+        letter-spacing: normal;
+        text-align: center;
+    }
+
+    .content img {
+        order: -1;
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+    }
+    
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkMode</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light">
+    <div class="top">
+        <header>I'm, Marcus Vinícius</header>
+        <div class="top-right">
+            <nav>
+                <h3>HOME |</h3>
+                <h3> SOBRE |</h3>
+                <h3> CONTATO |</h3>
+                <h3> INFORMACÕES</h3>
+            </nav>
+            <label class="switch" id="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <main>
+        <section class="about">
+            <h1>SOBRE MIM</h1>
+            <div class="content">
+                <div class="text">
+                    <span>
+                        <h1>DESENVOLVEDOR</h1>
+                        <h1>FULLSTACK</h1>
+                    </span>
+                    <p>Olá! Sou desenvolvedor FULLSTACK JÚNIOR, formado pela DRIVEN EDUCATION e estou a procura de novos
+                        desafios!</p>
+                </div>
+                <div class="imagem">
+                    <img src="./imgs/WhatsApp Image 2022-07-07 at 13.42.57.jpeg" alt="">
+                </div>
+            </div>
+            <h2>Tecnologias que eu utilizo: </h1>
+            <div class="tecnologias">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-node"></i>
+                <i class="fa-brands fa-react"></i>
+                <i class="fa-solid fa-database"></i>
+                <i class="fa-brands fa-npm"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+
+        </section>
+        <article>
+            <h3>
+                Ligth / Dark
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quia placeat expedita consequuntur in
+                molestias accusantium, minima doloremque aperiam hic veniam nam neque aliquam porro reprehenderit illum
+                ex mollitia voluptates.
+            </p>
+        </article>
+    </main>
+    <script src="https://kit.fontawesome.com/01ddfdab69.js" crossorigin="anonymous"></script>
+    <script>
+        const body = document.querySelector("body");
+        const switchBtn = document.getElementById("switch");
+        const root = document.querySelector(":root");
+        const imgs_tecnologias = document.querySelectorAll(".tecnologias > i")
+
+        // Change theme
+        switchBtn.addEventListener("change", () => {
+            toggleRootClass();
+        });
+
+        function toggleRootClass() {
+            document.querySelector("body").classList.toggle("dark");
+            imgs_tecnologias.forEach(e => {
+                e.classList.toggle("dark")
+            })
+        }
+        setTimeout(() => {
+            document.querySelector(".tecnologias").scrollIntoView()
+            setTimeout(() => document.querySelector(".fa-github").scrollIntoView(),2000)
+        },3000)
+    </script>
+</body>
+
+</html>
