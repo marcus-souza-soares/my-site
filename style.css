@@ -5,10 +5,11 @@ html {
 }
 
 :root {
+    --top-color: #ffffff;
     --background-color: #f2f3fb;
     --text-color: #0D1207;
     --text-color-dark: #ffffff;
-    --dark-bg: #071120;
+    --dark-bg: #1c2007;
     --menu-font: 'Bebas Neue', cursive;
     --apresentacao-cor-fonte: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 22%, rgba(0, 212, 255, 1) 100%);
 }
@@ -19,6 +20,7 @@ html {
 }
 
 body.dark {
+    --top-color: #1c2007;
     background-color: var(--dark-bg);
     color: var(--text-color-dark);
 }
@@ -32,12 +34,12 @@ body {
 }
 
 .top {
+    background-color: var(--top-color);
     align-items: center;
     max-width: 1000px;
     display: flex;
     flex-wrap: nowrap;
-    padding: 20px 20px 10px 20px;
-    margin: 10px auto;
+    padding: 10px 20px 10px 20px;
     justify-content: space-between;
     border-bottom: 2px solid #ff9d14b7;
     border-top: 2px solid #ff9d14b7;
@@ -139,8 +141,7 @@ main {
     border: 2px dashed rgb(88, 85, 85);
     border-radius: 35px;
     position: relative;
-    padding: 0 20px;
-    min-height: 800px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,7 +149,7 @@ main {
     margin: 20px;
 }
 
-.container > h1 {
+.container>h1 {
     font-family: var(--menu-font);
     font-size: 30px;
     position: absolute;
@@ -162,9 +163,9 @@ main {
     font-family: 'Kaushan Script', cursive;
 }
 
-.imagem img {
-    max-width: 20em;
-    max-height: 20rem;
+.perfil img {
+    max-width: 18em;
+    max-height: 18rem;
     border-radius: 40%;
     border: 2px solid var(--background-color);
     animation-name: translater;
@@ -174,7 +175,10 @@ main {
 }
 
 .content {
+    margin: 50px 20px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .text {
@@ -183,8 +187,8 @@ main {
     justify-content: space-between;
 }
 
-.content h1 {
-    font-size: 90px;
+.text h1 {
+    font-size: 80px;
     background: var(--apresentacao-cor-fonte);
     background-clip: text;
     -webkit-background-clip: text;
@@ -218,11 +222,11 @@ main {
 
 }
 
-.content .imagem {
+.content .perfil {
     border-radius: 30px;
 }
 
-.content p {
+.text p {
     font-size: 20px;
     letter-spacing: .1em;
     line-height: 25px;
@@ -247,9 +251,44 @@ i {
     margin: 15px 20px;
     font-size: 40px;
 }
+
+
+
+
+
+
+
+
+
+
+/* área de projetos */
+
+.rigth, .left {
+    width: auto;
+}
+.projeto-box {
+    display: flex;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.84);
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.84);
+}
+
+.projeto-box span {
+    display: inline;
+}
+
+.projeto-box .imagem img {
+    max-width: 5em;
+    height: auto;
+}
+
 footer {
     background-color: inherit;
 }
+
 footer div {
     border-radius: 50%;
     background-color: inherit;
@@ -258,10 +297,11 @@ footer div {
     bottom: 10px;
     z-index: 1;
 }
+
 footer ion-icon {
     width: 1.5em;
     height: 1.5em;
-} 
+}
 
 
 @media (max-width: 600px) {
@@ -299,7 +339,8 @@ footer ion-icon {
         -ms-transform: translateX(10px);
         transform: translateX(10px);
     }
-    .container{
+
+    .container {
         min-height: auto;
         margin-bottom: 40px;
     }
@@ -309,14 +350,11 @@ footer ion-icon {
     }
 
     .content {
-        margin-top: 40px;
+        margin-top: 50px;
         align-items: center;
-        width: 100%;
-        padding: 20px;
-        flex-direction: column;
     }
 
-    .content h1 {
+    .text h1 {
         text-align: center;
         font-size: 60px;
     }
@@ -326,11 +364,14 @@ footer ion-icon {
         text-align: center;
     }
 
-    .content img {
+    .perfil img {
         order: -1;
         margin-top: 20px;
         width: 100%;
         height: 100%;
+    }
+    .projeto-box {
+        width: 80%;
     }
 
 }
