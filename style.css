@@ -8,7 +8,7 @@ html {
     --top-color: #ffffff;
     --background-color: #f2f3fb;
     --text-color: #0D1207;
-    --text-color-dark: #ffffff;
+
     --dark-bg: #1c2007;
     --menu-font: 'Bebas Neue', cursive;
     --apresentacao-cor-fonte: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 22%, rgba(0, 212, 255, 1) 100%);
@@ -20,9 +20,9 @@ html {
 }
 
 body.dark {
+    --text-color: #ffffff;
     --top-color: #1c2007;
     background-color: var(--dark-bg);
-    color: var(--text-color-dark);
 }
 
 body {
@@ -39,7 +39,7 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    padding: 10px 0px 10px 0px;
+    padding: 10px;
     justify-content: space-between;
     border-bottom: 2px solid #ff9d14b7;
     border-top: 2px solid #ff9d14b7;
@@ -130,6 +130,7 @@ input:checked+.slider:before {
 .slider:before {
     border-radius: 50%;
 }
+
 .container.sobre {
     margin-top: 70px;
 }
@@ -256,7 +257,10 @@ main {
 i {
     margin: 15px 20px;
     font-size: 40px;
+    height: 40px;
+    width: 40px;
 }
+
 
 
 
@@ -264,9 +268,11 @@ i {
 
 /* área de projetos */
 
-.rigth, .left {
+.rigth,
+.left {
     width: auto;
 }
+
 .projeto-box {
     display: flex;
     width: 300px;
@@ -278,7 +284,8 @@ i {
     flex-direction: column;
     justify-content: space-between;
 }
-.principal{
+
+.principal {
     display: flex;
 }
 
@@ -290,6 +297,7 @@ i {
     max-width: 5em;
     height: auto;
 }
+
 .btns {
     margin-top: 10px;
     width: 100%;
@@ -318,20 +326,21 @@ footer ion-icon {
 
 @media (max-width: 600px) {
     .top {
-        flex-direction: column;
         align-items: center;
     }
 
     header {
-        margin-bottom: 15px;
+        font-size: 16px;
+
     }
 
     nav {
+        margin-right: 10px;
         font-size: 18px;
     }
 
     .top-right {
-        width: 100%;
+        width: auto;
         display: flex;
         justify-content: space-between;
     }
@@ -350,6 +359,10 @@ footer ion-icon {
         -webkit-transform: translateX(10px);
         -ms-transform: translateX(10px);
         transform: translateX(10px);
+    }
+
+    .container.sobre {
+        margin-top: 58px;
     }
 
     .container {
@@ -382,8 +395,12 @@ footer ion-icon {
         width: 100%;
         height: 100%;
     }
+
     .projeto-box {
         width: auto;
     }
 
 }
+
+
+/* FOR SVGS -------------------- */
