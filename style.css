@@ -36,15 +36,18 @@ body {
 .top {
     background-color: var(--top-color);
     align-items: center;
-    max-width: 1000px;
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 0px 10px 0px;
     justify-content: space-between;
     border-bottom: 2px solid #ff9d14b7;
     border-top: 2px solid #ff9d14b7;
     font-size: 30px;
     font-family: var(--menu-font);
+    margin: 0 auto;
+    position: fixed;
+    z-index: 1;
 }
 
 .top-right {
@@ -126,6 +129,9 @@ input:checked+.slider:before {
 
 .slider:before {
     border-radius: 50%;
+}
+.container.sobre {
+    margin-top: 70px;
 }
 
 main {
@@ -256,11 +262,6 @@ i {
 
 
 
-
-
-
-
-
 /* área de projetos */
 
 .rigth, .left {
@@ -272,8 +273,13 @@ i {
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.84);
+    -webkit-box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.84);
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.84);
+    flex-direction: column;
+    justify-content: space-between;
+}
+.principal{
+    display: flex;
 }
 
 .projeto-box span {
@@ -283,6 +289,12 @@ i {
 .projeto-box .imagem img {
     max-width: 5em;
     height: auto;
+}
+.btns {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 footer {
@@ -371,7 +383,7 @@ footer ion-icon {
         height: 100%;
     }
     .projeto-box {
-        width: 80%;
+        width: auto;
     }
 
 }
