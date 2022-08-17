@@ -274,6 +274,7 @@ i {
 }
 
 .projeto-box {
+    background-color: #fff;
     display: flex;
     width: 300px;
     border-radius: 10px;
