@@ -6,10 +6,10 @@ html {
 
 :root {
     --top-color: #ffffff;
-    --background-color: #f2f3fb;
-    --text-color: #0D1207;
+    --background-color: #f0f0f0;
+    --text-color: #040503;
 
-    --dark-bg: #1c2007;
+    --dark-bg: #000000;
     --menu-font: 'Bebas Neue', cursive;
     --apresentacao-cor-fonte: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 22%, rgba(0, 212, 255, 1) 100%);
 }
@@ -48,6 +48,10 @@ body {
     margin: 0 auto;
     position: fixed;
     z-index: 1;
+}
+
+.others {
+    font-family: var(--menu-font);
 }
 
 .top-right {
@@ -137,7 +141,7 @@ input:checked+.slider:before {
 
 main {
     max-width: 1000px;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;
@@ -186,6 +190,15 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+a {
+    color: inherit !important;
 }
 
 .text {
@@ -205,6 +218,22 @@ main {
     animation-duration: 2s;
     animation-direction: normal;
     animation-fill-mode: forwards;
+}
+
+.code {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 13px;
+    color: white;
+    background-color: blue;
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: background 0.5s;
+}
+
+.code:hover {
+    background-color: darkblue;
 }
 
 .text {
@@ -274,6 +303,7 @@ i {
 }
 
 .projeto-box {
+    background-color: #fff;
     display: flex;
     width: 300px;
     border-radius: 10px;
